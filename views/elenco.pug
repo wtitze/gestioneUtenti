@@ -7,15 +7,15 @@ html
     if list !== undefined
       table
         thead
-          th(align='left') N
+          th(align='left') id
           th(align='left') Cognome 
           th(align='left') Nome 
           th(align='left') Indirizzo email
         each utente, index in list
           // una riga per ogni utente
           tr
-            // prima cella il numero dell'utente (non è l'id)
-            td= index
+            // prima cella id dell'utente 
+            td= utente._id
             // seconda cella il cognome dell'utente
             td= utente.lastName
             // terza cella il nome dell'utente
