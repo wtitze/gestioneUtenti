@@ -1,0 +1,50 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+  body
+    form(action='execOp', method='get')
+      | #{message}:
+      br
+      br
+      input(type='radio', name='operazione', value='create')
+      |  inserimento di un nuovo utente
+      br
+      | inserisci il nome: 
+      input(type='text', name='cNome')
+      br
+      | inserisci il cognome: 
+      input(type='text', name='cCognome')
+      br
+      | inserisci la mail: 
+      input(type='text', name='cEmail')
+      br
+      br
+      input(type='radio', name='operazione', value='read')
+      |  visualizzazione degli utenti
+      br
+      br
+      input(type='radio', name='operazione', value='update')
+      |  aggiornamento della mail di un utente
+      br
+      | inserisci il nome: 
+      input(type='text', name='uNome')
+      br
+      | inserisci il cognome: 
+      input(type='text', name='uCognome')
+      br
+      | inserisci la nuova mail: 
+      input(type='text', name='uEmail')
+      br
+      br
+      input(type='radio', name='operazione', value='delete')
+      |  eliminazione di un utente
+      br
+      | inserisci il nome: 
+      input(type='text', name='dNome')
+      br
+      | inserisci il cognome: 
+      input(type='text', name='dCognome')
+      br
+      br
+      input(type='submit', value='invia')
